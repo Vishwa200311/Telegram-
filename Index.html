@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ad Redirect</title>
+  <style>
+    #nextBtn {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function goToAd(adUrl) {
+      window.open(adUrl, "_blank");
+      setTimeout(() => {
+        document.getElementById('nextBtn').style.display = 'inline-block';
+      }, 7000);
+    }
+
+    function goToRealSite(realUrl) {
+      window.location.href = realUrl;
+    }
+  </script>
+</head>
+<body>
+  <h2>Watch this short ad to continue</h2>
+  <button onclick="goToAd('https://www.profitableratecpm.com/m5thq07z?key=a95ac6635405e1083234875a755f62ef')">Watch Ad</button>
+  <button id="nextBtn" onclick="goToRealSite('https://tinyurl.com/472cuhmv')">Go to Website</button>
+</body>
+</html>
